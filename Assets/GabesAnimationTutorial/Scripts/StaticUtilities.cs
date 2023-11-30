@@ -6,13 +6,17 @@ public static class StaticUtilities
     public static readonly int XSpeedAnimId = Animator.StringToHash("xSpeed");
     public static readonly int YSpeedAnimId = Animator.StringToHash("ySpeed");
     public static readonly int IdleAnimId = Animator.StringToHash("IdleState");
+    public static readonly int AttackAnimId = Animator.StringToHash("Attack");
+    public static readonly int TurnAnimId = Animator.StringToHash("Turn");
+    public static readonly int isTurnAnimId = Animator.StringToHash("isTurning");
 
     // 2) Layers
     public static readonly int GroundLayer = 1 << LayerMask.NameToLayer("Ground");
     public static readonly int PlayerLayer = 1 << LayerMask.NameToLayer("Player");
     public static readonly int EnemyLayer =  1  << LayerMask.NameToLayer("Enemy");
-    
-    public static readonly int MoveLayerMask = GroundLayer | EnemyLayer;
+
+    public static readonly int MoveLayerMask = GroundLayer | EnemyLayer | PlayerLayer;
+    public static readonly int AttackLayerMask = GroundLayer | EnemyLayer ;
 
     // 3) Shaders
     public static readonly int Color = Shader.PropertyToID("_Color");

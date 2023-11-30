@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public static class InputManager
 {
@@ -49,6 +50,7 @@ public static class InputManager
         
         //Set commander controlled inputs
         Inputs.InGame.Attack.performed += _ => _commander.Attack(CamToWorldRay());
+        Inputs.InGame.Attack.performed += _ => _commander.Marked(CamToWorldRay());
         Inputs.InGame.MoveTo.performed += _ => _commander.MoveTo(CamToWorldRay());
 
         //Set camera controlled inputs

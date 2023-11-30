@@ -348,6 +348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
+  fireBall: {fileID: 0}
+  firePoint: {fileID: 0}
+  boredTimer: 1
 --- !u!195 &6384418306440440774
 NavMeshAgent:
   m_ObjectHideFlags: 0
